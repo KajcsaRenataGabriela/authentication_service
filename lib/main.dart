@@ -11,6 +11,7 @@ void main() async {
   runApp(const MyAuthApp());
 }
 
+
 class MyAuthApp extends StatelessWidget {
   const MyAuthApp({Key? key}) : super(key: key);
 

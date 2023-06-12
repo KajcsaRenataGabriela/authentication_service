@@ -1,8 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.authentication_service">
    <application
-        android:label="authentication_service"
-        android:name="${applicationName}"
+        android:label="Authentication Service"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
