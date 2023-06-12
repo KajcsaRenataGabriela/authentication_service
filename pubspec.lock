@@ -18,7 +18,7 @@ packages:
     source: hosted
     version: "0.35.4"
   aqueduct:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: aqueduct
       sha256: "21b57d0cdc8ac4eaeff3527b122e03f2eda0203510d2abacde5c4a7f648a6c0d"

@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-import 'package:aqueduct/aqueduct.dart';
 
 
 import '../utils/response.dart';
@@ -8,26 +7,6 @@ import '../utils/status_code.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-
-  Future<AppResponse> login(@Bind.body() Map<String, dynamic> request) async {
-    final email = request['email'] as String;
-    final password = request['password'] as String;
-
-    try {
-      final userCredential = await _firebaseAuth.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-
-      // Authentication successful
-      // Return a success response
-      return AppResponse.ok({'message': 'Authentication successful'});
-    } catch (e) {
-      // Authentication failed
-      // Return an error response
-      return AppResponse.unauthorized();
-    }
-  }
 
   Future<UserCredential> signUpWithEmailAndPassword(
       String email, String password) async {
