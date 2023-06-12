@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authentication-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authentication
+  template:
+    metadata:
+      labels:
+        app: authentication
+    spec:
+      containers:
+        - name: authentication-service
+          image: flutter_docker_auth
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENV_VAR_NAME
+              value: ENV_VAR_VALUE
+          resources:
+            limits:
+              cpu: "1"
+              memory: "512Mi"
